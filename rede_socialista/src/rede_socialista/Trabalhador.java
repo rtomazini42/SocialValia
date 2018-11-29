@@ -3,7 +3,7 @@ package rede_socialista;
 public class Trabalhador {
 	private double Valor;
 	private static double MaisValia;
-	private static double Salario;
+	private double Salario;
 	private double Horas;
 
 	public void Trabalhar(float Horas){
@@ -11,7 +11,8 @@ public class Trabalhador {
 		System.out.println("trabalhando");
 		Valor = Valor * Horas;
 		System.out.println("Gerou:" + Valor);
-		Trabalhador.Salario = Salario + (Valor * MaisValia);
+		Salario = this.getSalario();
+		Salario = Salario + (Valor * MaisValia);
 		System.out.println("Ganhou "+ Salario);
 	}
 	
